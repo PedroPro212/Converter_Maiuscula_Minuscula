@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="style/index.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="row">
+                <h1 class="text-center">Converter Texto</h1>
+                <p class="text-center">Vamos converter seu texto? Sim!! Para converter é bem simples, basta colocar seu texto no primeiro campo e selecionar para qual formato irá converter, Maiúsculo ou Minúsculo. Depois só clicar no botão e copiar o resultado 😀</p>
+                <div class="col-sm-4">     
+                    <label for="txtTexto">Texto de entrada:</label>
+                    <textarea type="text" id="txtTexto" placeholder="Escreva aqui..."></textarea>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <label>Converter para:</label><br>
+                    <label for="chcMaiuscula">Tudo Maiúsculo</label>
+                    <input type="checkbox" id="chcMaiuscula" onclick="Escolher(this)"><br>
+
+                    <label for="chcMinuscula">Tudo Minúsculo</label>
+                    <input type="checkbox" id="chcMinuscula" onclick="Escolher(this)"><br>
+
+                    <label for="chcManter">Manter primeira letra da frase Maiúsculo</label>
+                    <input type="checkbox" id="chcManter" onclick="Escolher(this)">
+                </div>
+                <div class="col-sm-4">
+                    <label for="txtConvertido">Texto Convertido:</label>
+                    <textarea id="txtConvertido" disabled></textarea>
+                </div>
+            </div>
+        </div>
+
+        <button class="center-block converter" onclick="Converter()">Converter</button>
+    </main>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
